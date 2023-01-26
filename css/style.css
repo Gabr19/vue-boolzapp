@@ -46,12 +46,29 @@
 
 .left .user{
     height: 100%;
-    min-width: 20%;
+    min-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left .user > img{
+    height: 80%;
+    border-radius: 50px;
+    margin: 5px;
 }
 
 .left .action{
     height: 100%;
-    min-width: 20%;
+    min-width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left .header .action > div{
+    width: 100%;
+    color: gray;
 }
 
 .left .notification{
@@ -60,10 +77,17 @@
     display: flex;
     flex-grow: 1.0;
     background-color: #8edafc;
+    justify-content: center;
+    align-items: center;
 }
 
 .left .notification .icon{
     aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 0 20px;
 }
 
 .left .notification .text{
@@ -71,15 +95,30 @@
     flex-grow: 1.0;
 }
 
+/* LEFT MAIN */
 .left .main{
     background-color: #ffffff;
     width: 100%;
     height: calc(100% - 20%);
 }
 
-.left .main .search-bar{
+.left .main .search-bar {
     height: 5%;
-    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left .main .search-bar > i{
+    color: gray;
+    margin-right: 10px;
+}
+
+.left .main .search-bar > input{
+    height: 80%;
+    color: gray;
+    width: 90%;
 }
 
 .left .main .contact-list{
@@ -91,6 +130,16 @@
     height: 10%;
     background-color: #ffffff;
     border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.left .main .single-contact > img{
+    height: 90%;
+    border-radius: 50px;
+    margin: 5px;
 }
 
 /* RIGHT */
@@ -111,7 +160,6 @@
 .right .contact{
     height: 100%;
     min-width: 20%;
-    background-image: ;
 }
 
 .right .action{
@@ -122,6 +170,8 @@
 .right .main{
     width: 100%;
     height: calc(100% - 20%);
+    background-image: url("../img/mine.jpg");
+
 }
 
 .right .footer{
