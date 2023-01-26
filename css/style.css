@@ -190,7 +190,42 @@
     width: 100%;
     height: calc(100% - 20%);
     background-image: url("../img/mine.jpg");
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
 
+.right .main .msg {
+    background-color: aquamarine;
+    min-width: 30%;
+    max-width: 60%;
+    height: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px;
+
+
+}    
+
+.right .main .msg.sent{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-end;
+    background-color: #d5f9ba;
+    
+    
+}
+
+.right .main .msg.received{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    background-color: #ffffff;
+
+   
 }
 
 
