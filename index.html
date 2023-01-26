@@ -51,34 +51,12 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="search" id="form1" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
                     </div>
-                    <div class="contact-list">
-                        <div class="single-contact">
-                            <img src="img/avatar_1.jpg" alt="">
-                            Michele                        
+                    <div class="contact-list" >
+                        <div class="single-contact" v-for="(contact, index) in contacts">
+                            <img :src="` img/avatar${contact.avatar}.jpg ` " :alt="contact.name">
+                            {{contact.name}}                        
                         </div>
-                        <div class="single-contact">
-                            <img src="img/avatar_2.jpg" alt="">
-                            Fabio                        
-                        </div>
-                        <div class="single-contact">
-                            <img src="img/avatar_3.jpg" alt="">
-                            Samuele                        
-                        </div><div class="single-contact">
-                            <img src="img/avatar_4.jpg" alt="">
-                            Alessandro B.                        
-                        </div><div class="single-contact">
-                            <img src="img/avatar_5.jpg" alt="">
-                            Alessandro L.                        
-                        </div><div class="single-contact">
-                            <img src="img/avatar_6.jpg" alt="">
-                            Claudia                        
-                        </div><div class="single-contact">
-                            <img src="img/avatar_7.jpg" alt="">
-                            Federico                        
-                        </div><div class="single-contact">
-                            <img src="img/avatar_8.jpg" alt="">
-                            Davide                        
-                        </div>                    
+                                       
                     </div>
                     
                 </div>
