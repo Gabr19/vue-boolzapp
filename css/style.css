@@ -3,3 +3,68 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* .header-bg{
+    background-color: rgba(0,150,136,255);
+}
+
+.main-bg{
+    background-color: rgba(218,219,211,255);
+} */
+
+#app{
+    height: 650px;
+    width: 100vw;
+    background: rgb(217,219,211);
+    background: linear-gradient(0deg, rgba(217,219,211,1) 85%, rgba(0,150,136,1) 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 90%;
+    width: 70%;
+    background-color: white;
+    display: flex;
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+.header{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    background-color: #eaeaea;
+}
+
+.left .user{
+    height: 100%;
+    width: 50%;
+}
+
+.left .action{
+    height: 100%;
+    width: 50%;
+}
+
+.left .notification{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-grow: 1.0;
+    background-color: #8edafc;
+}
+
+.left .notification .icon{
+    aspect-ratio: 1/1;
+}
+
+.left .notification .text{
+    display: flex;
+    flex-grow: 1.0;
+}

@@ -1,6 +1,4 @@
-<div id="app">{{ message }}</div>
-
-  const { createApp } = Vue
+const { createApp } = Vue
 
   createApp({
     data() {
@@ -8,4 +6,4 @@
         message: 'Hello Vue!'
       }
     }
-  }).mount('#app')
+  }).mount('#app') 
