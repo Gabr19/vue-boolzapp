@@ -63,11 +63,13 @@
 
             </div>
 
+            <!-- RIGHT -->
+
             <div class="right">
                 <div class="header">
                     <div class="single-contact">
-                        <img src="img/avatar_1.jpg" alt="">
-                        Michele                        
+                        <img :src="` img/avatar${contacts[activeContact].avatar}.jpg ` " :alt="contacts[activeContact].name">
+                        {{contacts[activeContact].name}}                       
                     </div>
                     <div class="action">
                         <div>
@@ -82,14 +84,16 @@
                     </div>
                 </div>
                 
-                <div class="main">
-                    <div class="msg sent ">
-                            sent
-                    </div>
+                <div class="main" >
+                    <div class="msg " v-for="(singleMessage, index) in contacts[activeContact].messages"
+                    :class="{
+                    sent : singleMessage.status == 'sent',
+                    received : singleMessage.status == 'received',
 
-                    <div class="msg received">
-                            received
-                        
+                    }">
+
+                    
+                            {{singleMessage.message}}
                     </div>
                     
                 </div>
