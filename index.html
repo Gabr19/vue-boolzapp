@@ -52,7 +52,8 @@
                         <input type="search" id="form1" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Search" />
                     </div>
                     <div class="contact-list" >
-                        <div class="single-contact" v-for="(contact, index) in contacts">
+                        <div class="single-contact" v-for="(contact, index) in contacts"
+                        @click="changeContact(index)">
                             <img :src="` img/avatar${contact.avatar}.jpg ` " :alt="contact.name">
                             {{contact.name}}                        
                         </div>
