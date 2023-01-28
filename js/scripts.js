@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         activeContact : 0,
+        newMessage: '',
 
         contacts: [
           {
@@ -25,7 +26,9 @@ const { createApp } = Vue
           date: '10/01/2020 16:15:22',
           message: 'Tutto fatto!',
           status: 'received'
-          }
+          },
+
+
           ],
           },
           {
@@ -174,6 +177,28 @@ const { createApp } = Vue
     methods:{
       changeContact(index){
         this.activeContact = index;
-      }
+      },
+      sendNewMessage(){
+        this.contacts[this.activeContact].messages.push({
+          date: '10/01/2020 16:15:22',
+          message: this.newMessage,
+          status: 'sent'
+          })
+          this.newMessage= ''
+          setTimeout(this.receivedNewMessage , 3000);
+          
+      },
+      receivedNewMessage(){
+        this.contacts[this.activeContact].messages.push({
+          date: '10/01/2020 16:15:22',
+          message: 'Ok!',
+          status: 'received'
+          })
+      },
+
+
+      
+      
+
     }
   }).mount('#app') 
